@@ -1,8 +1,63 @@
-{% include 'header.html' %}{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/home/home.css">
+    <link rel="stylesheet" href="../static/header/header.css">
+    <link rel="stylesheet" href="../static/contact/contact_us.css">
+    <script src="../static/header/header.js" defer></script>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+   
+    <title>SKIN SAVIOUR</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      intergrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+</head>
+<body>
+    <div id="overlay"><div class="popup" id="popup"></div></div>
+        <nav class="navigation">
+            <img class="image" src="../static/header/images/banner1.jpg" alt="">
+            <div class="container">
+            <div class="nav" id="navbar">
+            <div class="section-logo" >
+                <img src="../static/header/images/logo.png" alt="logo" width="40px" height="40px">
+                <h3 class="name">SKIN-SAVIOUR</h3>
+            </div>
+            <ul class="tabs">
+                <a href="home.html"><li >Home</li></a>
+                <a href="about.html"><li >About Us</li></a>
+                <a href="quiz.html"><li>Take Your Quiz</li></a>
+                <a href="skin_treatment.html"><li>Skin Treatement</li></a>
+                <a href="tips.html"><li >Tips</li></a>
+                <a href="#"><li>Contact Us</li></a>
+                
+                <button type="button" class="profile" id="profile" ><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                </svg>
+                <div id="dropdown">
+                    <div class="dropdown-items">
+                        <a href="signup.html">Signup</a>
+                        <a href="home.html">Logout</a>
+                    </div>
+                </div>
+                </button>
+                
+            </ul>
+            </div>
+            <div class="caption">
+            <h1 class="content" id="content">A ONE STOP DESTINATION FOR YOUR SKIN TIPS</h1>
+            </div>
+            </div>
+        </nav>
 <div id="overlay"><div class="popup" id="popup"></div></div>
 <div class="contact">
     <form id="contact_form" action="{% url 'save_form_data' %}" method="POST">
-        {% csrf_token %}
             <label for="name" class="name" >Name</label>
             <input type="text" id="name" name="name" required>
         <div class="division2">
@@ -70,31 +125,33 @@
 <!-- footer -->
 <div class="footer-container" style="background:url('../static/footer/images/products1.jpg');background-repeat: no-repeat;background-size: cover;background-position-y: center;">
     <div class="icons">
-        <a href="https://mail.google.com/mail/"><img class="image" src="{% static 'footer/images/email.png' %}" alt="" width="40px" height="30px"></a>
-        <a href="https://www.instagram.com/"><img class="image" src="{% static 'footer/images/instagram.png' %}" alt="" width="40px" height="30px"></a>
-        <a href="https://twitter.com/?lang=en"><img class="image" src="{% static 'footer/images/twitter.png' %}" alt="" width="40px" height="30px"></a>
+        <a href="https://mail.google.com/mail/"><img class="image" src="../static/footer/images/email.png" alt="" width="40px" height="30px"></a>
+        <a href="https://www.instagram.com/"><img class="image" src="../static/footer/images/instagram.png" alt="" width="40px" height="30px"></a>
+        <a href="https://twitter.com/?lang=en"><img class="image" src="../static/footer/images/twitter.png" alt="" width="40px" height="30px"></a>
     </div>
     <div class="content">FOR MORE INFORMATION CONNECT US AT: <a href="https://mail.google.com/mail/">skinsaviour@gmail.com</a></div>
 </div>
+    <script>
+        // JavaScript code to display a pop-up message when the form is submitted
+        document.getElementById('contact_form').addEventListener('submit', function(event) {
+            var overlay = document.getElementById('overlay');
+            var popup = document.getElementById('popup');
+            var child=document.createElement("p");
 
-<script>
-    // JavaScript code to display a pop-up message when the form is submitted
-    document.getElementById('contact_form').addEventListener('submit', function(event) {
-        var overlay = document.getElementById('overlay');
-        var popup = document.getElementById('popup');
-        var child=document.createElement("p");
 
+            child.classList.add("loginerror");
+            child.innerText="Thank You For Your Valuable Feedback";
+            popup.appendChild(child);
+            overlay.style.display = 'block';
 
-        child.classList.add("loginerror");
-        child.innerText="Thank You For Your Valuable Feedback";
-        popup.appendChild(child);
-        overlay.style.display = 'block';
+            setTimeout(()=>{
+                overlay.style.display = 'none';
+                clearInterval(timerInterval);
+            }, 3000)
 
-        setTimeout(()=>{
-            overlay.style.display = 'none';
-            clearInterval(timerInterval);
-        }, 3000)
+        });
+    </script>
+</body>
 
-    });
-</script>
+</html>
 

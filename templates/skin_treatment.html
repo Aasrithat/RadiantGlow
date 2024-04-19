@@ -1,201 +1,269 @@
-{% include 'header.html' %}{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/header/header.css">
+    <link rel="stylesheet" href="../static/skin treatment/skin_treatment.css">
+    <script src="../static/header/header.js" defer></script>
 
-<div class="naturalproducts">
-    <div class="disclaimer" id="disclaimer">
-        <p>
-             When using these ingredients , it's important to patch test first, especially if you have sensitive skin, to make sure you don't have any adverse reactions. Additionally, remember that natural products may not lather or feel the same as conventional cleansers, but they can still effectively cleanse the skin.
-        </p>
-    </div>
-    {% for facewash in facewash %}
-        <div class="heading">
-            {{facewash.facewash1 |safe}}<br>
-        </div>
-        <h2>HOW TO APPLY:</h2>
-        <div class="apply">
-            <div class="images">
-                <img src="{{ facewash.facewash1_image.url }}" alt=""><br>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+   
+    <title>SKIN SAVIOUR</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      intergrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+</head>
+<body>
+    <div id="overlay"><div class="popup" id="popup"></div></div>
+        <nav class="navigation">
+            <img class="image" src="../static/header/images/banner1.jpg" alt="">
+            <div class="container">
+            <div class="nav" id="navbar">
+            <div class="section-logo" >
+                <img src="../static/header/images/logo.png" alt="logo" width="40px" height="40px">
+                <h3 class="name">SKIN-SAVIOUR</h3>
             </div>
-            {{facewash.facewash1_application |safe}}<br>
+            <ul class="tabs">
+                <a href="home.html"><li >Home</li></a>
+                <a href="about.html"><li >About Us</li></a>
+                <a href="quiz.html"><li>Take Your Quiz</li></a>
+                <a href="#"><li>Skin Treatement</li></a>
+                <a href="tips.html"><li >Tips</li></a>
+                <a href="contact_us.html"><li>Contact Us</li></a>
+                
+                <button type="button" class="profile" id="profile" ><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                </svg>
+                <div id="dropdown">
+                    <div class="dropdown-items">
+                        <a href="signup.html">Signup</a>
+                        <a href="home.html">Logout</a>
+                    </div>
+                </div>
+                </button>
+                
+            </ul>
+            </div>
+            <div class="caption">
+            <h1 class="content" id="content">A ONE STOP DESTINATION FOR YOUR SKIN TIPS</h1>
+            </div>
+            </div>
+        </nav>
+        <div class="naturalproducts">
+            <div class="disclaimer" id="disclaimer">
+                <p>
+                    When using these ingredients , it's important to patch test first, especially if you have sensitive skin, to make sure you don't have any adverse reactions. Additionally, remember that natural products may not lather or feel the same as conventional cleansers, but they can still effectively cleanse the skin.
+                </p>
+            </div>
+            <div class="differentiation">
+                NATURAL PRODUCTS FOR ALL SKIN TYPES
+            </div>
+            <div class="heading">
+                RAW HONEY
+            </div>
+            <h2>HOW TO APPLY:</h2>
+            <div class="apply">
+                <div class="images">
+                    <img src="../media/NaturalProducts/facewash/Natural_Products_5bTSxgy.jpg" alt=""><br>
+                </div>
+            </p>Look for raw, unprocessed honey, as it retains more of its beneficial properties compared to processed honey. Wet your face with warm water to open up the pores. Then, take a small amount of honey (about a teaspoon) and massage it gently onto your damp skin using circular motions. Leave it on for a few minutes to allow the honey to work its magic.Rinse your face thoroughly with lukewarm water to remove the honey. You may also use a soft washcloth or sponge to help remove the honey and any impurities from the skin.</p><br>
         </div>
         <div class="benefits">
             <h3>BENEFITS:</h3>
             <ul>
-                {{facewash.facewash1_benefits |safe}}<br>
+                <li>Honey contains natural antimicrobial agents that can help kill bacteria on the skin's surface.</li>
+                <li>It attracts moisture from the air and helps retain it in the skin, keeping it hydrated and soft.</li>
+                <li>The slight acidity of honey can help gently exfoliate the skin, removing dead skin cells and promoting cell turnover for a brighter complexion.</li><br>
             </ul>
         </div>
         <div class="heading">
-            {{facewash.facewash2 |safe}}<br>
+            YOGURT<br>
         </div>
         <h2>HOW TO APPLY:</h2>
         <div class="apply">
             <div class="images">
-                <img src="{{ facewash.facewash2_image.url }}" alt="">
+                <img src="../media/NaturalProducts/facewash/Natural_Products.jpg" alt="">
             </div>
-            {{facewash.facewash2_application |safe}}<br>
+            <p>Opt for plain yogurt. Start by washing your hands thoroughly to avoid bacteria. Then, splash your face with lukewarm water to dampen it. Take a small amount of yogurt (about a teaspoon) and gently massage it onto your damp skin using circular motions.Allow the yogurt to sit on your skin for a few minutes to give the lactic acid time to work its magic and exfoliate your skin. After a few minutes, rinse your face thoroughly with lukewarm water to remove the yogurt. You can use your hands or a soft washcloth to help remove it.Pat your skin dry with a clean towel.</p><br>
         </div>
         <div class="benefits">
             <h3>BENEFITS:</h3>
             <ul>
-                {{facewash.facewash2_benefits |safe}}<br>
+                <li>Yogurt contains lactic acid, a type of alpha hydroxy acid (AHA) that gently exfoliates the skin by loosening dead skin cells and promoting cell turnover.</li>
+                <li>It effectively removes dirt, oil, and impurities from the skin's surface without stripping away its natural oils, making it suitable for all skin types.</li>
+                <li>Yogurt helps to balance the skin's pH level, which is important for maintaining healthy skin</li><br>
             </ul>
+        </div>
+        <div class="heading">
+            JOJOBA SERUM
+        </div>
+        <h2>HOW TO APPLY:</h2>
+        <div class="apply">
+            <div class="images">
+                <img src="../media/NaturalProducts/serum/Natural_Products.jpg" alt="">
+            </div>
+            <p>Start with cleansing your face. You can use one of the  above cleansers to remove any makeup, dirt, and impurities.Dispense a few drops of jojoba oil onto your fingertips. You only need a small amount as jojoba oil is highly concentrated. Using gentle upward motions, massage the jojoba oil into your skin. Focus on areas that need extra hydration or attention, such as dry patches or fine lines. Give the oil a few minutes to fully absorb into the skin. It should leave your skin feeling soft, smooth, and hydrated, without any greasy residue. you can also mix it with aloe vera gel for added soothing properties or with essential oils for fragrance and additional skincare benefits.</p>
+        </div>
+        <div class=benefits>
+            <h3>BENEFITS:</h3>
+            <ul>
+                <li>Jojoba oil closely mimics the skin's natural sebum, making it highly compatible with all skin types.</li> 
+                <li>Despite being lightweight, jojoba oil is deeply hydrating. It forms a protective barrier on the skin, preventing moisture loss and keeping the skin soft and supple.</li>
+                <li>Jojoba oil is rich in vitamins E and B-complex, as well as minerals such as zinc and copper. These nutrients provide nourishment to the skin, promoting overall skin health.</li>
+            </ul>
+        </div>
+        <div class="heading">
+            ARGAN OIL
+        </div>
+        <h2>HOW TO APPLY:</h2>
+        <div class="apply">
+            <div class="images">
+                <img src="../media/NaturalProducts/serum/Natural_Products_q9b5Occ.jpg" alt="">
+            </div>
+            <p>Start with cleansing your face. You can use one of the  above cleansers to remove any makeup, dirt, and impurities. Pour a few drops of argan oil into the palm of your hand. You only need a small amount, as argan oil is highly concentrated. Rub your palms together to warm the argan oil slightly. Gently Apply it in a cricular motions. This helps improve its absorption into the skin and makes it easier to apply. Focus on areas that need extra hydration or attention, such as dry patches, fine lines, or areas of inflammation. Give the argan oil a few minutes to fully absorb into the skin. </p>
+        </div>
+        <div class="benefits">
+            <h3>BENEFITS:</h3>
+            <ul>
+                <li>Argan oil is abundant in vitamin E, a powerful antioxidant that helps protect the skin from free radical damage caused by environmental stressors such as UV radiation and pollution. </li>
+                <li>Argan oil is rich in essential fatty acids, including omega-6 and omega-9 fatty acids. These fatty acids help maintain the skin's lipid barrier, preventing moisture loss and enhancing hydration</li>.
+                <li>Argan oil has emollient properties that help soften and smooth the skin, improving texture and elasticity. It penetrates deeply into the skin, delivering hydration and nutrients to the underlying layers. Regular use of argan oil can result in a more radiant, supple complexion.</li>
+            </ul>
+        </div>
+        <div class="heading">
+            ALOVERA
+        </div>
+        <h2>HOW TO APPLY:</h2>
+        <div class="apply">
+            <div class="images">
+                <img src="../media/NaturalProducts/moisturizer/Natural_Products.jpg" alt="">
+            </div>
+            <p>You can simply cut a leaf from alovera plant and extract the gel from it. Before applying aloevera gel, make sure your face is clean. You can use a gentle cleanser to remove any dirt, oil, or makeup residueTake a small amount of aloe vera gel and apply it evenly to your face. Gently massage it into your skin using circular motions. Be careful around the sensitive eye area.Allow the aloe vera gel to dry on your face. It usually dries quickly and leaves a thin, moisturizing layer on the skin. You can follow up with your regular skincare routine if desired. Aloe vera gel can be used alone as a moisturizer</p>
+        </div>
+        <div class=benefits>
+            <h3>BENEFITS:</h3>
+            <ul>
+                <li>aloe vera gel is composed of around 99% water, making it an excellent natural moisturizer. It helps to hydrate the skin, keeping it soft and supple.</li>
+                <li>Aloe vera has anti-inflammatory properties, which can help to calm and soothe irritated or sensitive skin. It can be particularly beneficial for conditions like sunburn, eczema, or psoriasis.</li>
+                <li>Aloe vera contains compounds like vitamins, enzymes, and amino acids that promote skin healing.</li>
+                <li>Aloe vera gel contains antioxidants like vitamins C and E, which can help to neutralise free radicals and protect the skin from premature aging.</li>
+            </ul>
+        </div>
+        <div class="heading">
+            COCONUT OIL
+        </div>
+        <h2>HOW TO APPLY:</h2>
+        <div class="apply">
+            <div class="images">
+                <img src="../media/NaturalProducts/moisturizer/Natural_Products.webp" alt="">
+            </div>
+            <p>Make sure your skin is clean and free of any makeup or dirt.Coconut oil solidifies at cooler temperatures, so you may need to warm it up slightly to make it easier to apply.For best results, apply coconut oil to slightly damp skin. This helps lock in moisture and allows the oil to absorb more effectively. Using your fingertips, gently massage the coconut oil onto your skin using circular motions. Focusing on areas that are particularly dry or in need of moisture allow it some time to absorb into your skin before applying makeup or going to bed. Coconut oil can be quite emollient, so a little goes a long way. It's also great for targeted hydration on dry patches or as a nourishing treatment for your lips and cuticles.</p>
+        </div>
+        <div class="benefits">
+            <h3>BENEFITS:</h3>
+            <ul>
+                <li>It's especially beneficial for dry or irritated skin. Simply apply a small amount of coconut oil to clean skin and massage it in .</li>
+                <li>Coconut oil is rich in fatty acids, particularly lauric acid, which can penetrate deep into the skin to hydrate and moisturize. It helps to lock in moisture, keeping the skin soft and supple.</li>
+                <li>coconut oil contains antioxidants such as vitamin E, which help protect the skin from damage caused by free radicals</li>
+                <li>The fatty acids in coconut oil help strengthen the skin's natural barrier function, which is essential for retaining moisture and protecting against environmental stressors.</li>
+            </ul>
+        </div>
+        <div class="heading">
+            COFFEE SCRUB
+        </div>
+        <div class="preparation">
+            <h2>PREPARATION:</h2>
+            <p>In a small bowl, combine the finely ground coffee beans with the organic coconut oil. If you're using sugar, add it to the mixture as well. Mix everything together until you get a uniform consistency. For example, you can add a few drops of essential oils like lavender or tea tree oil for added fragrance and skin benefits. Keep it in a cool, dry place, away from direct sunlight. It's best to make small batches of the scrub and use it within a few weeks to ensure freshness.</p>
+        </div>
+        <h2>HOW TO APPLY:</h2>
+        <div class="apply">
+            <div class="images">
+                <img src="../media/NaturalProducts/scrub/Natural_Products.png" alt="">
+            </div>
+            <p>When you're ready to use the coffee scrub, scoop out a small amount and apply it to damp skin. Gently massage the scrub onto your face using circular motions, let it dry for half-an-hour. Then rinse it off thoroughly with lukewarm water. After, tap your face with dry towel .</p>
+        </div>
+        <div class=benefits>
+            <h3>BENEFITS:</h3>
+            <ul>
+                <li>The texture of coffee grounds makes them an excellent natural exfoliant. When massaged onto the skin, coffee grounds help to slough away dead skin cells, dirt, and impurities, revealing smoother, brighter skin underneath.</li>
+                <li>The massaging action of applying a coffee scrub to the skin helps to stimulate blood flow and circulation.</li>
+                <li>Coffee contains antioxidants such as chlorogenic acid and melanoidins, which help to neutralize free radicals and protect the skin from oxidative damage. This can help to prevent premature aging and keep the skin looking youthful and healthy.</li>
+            </ul>
+        </div>
+        <div class="heading">
+            OAT MEAL SCRUB
+        </div>
+        <div class="preparation">
+            <h2>PREPARATION:</h2>
+            <p>If you're using whole rolled oats, grind them into a fine powder using a blender or food processor. Finely ground oatmeal will create a smoother texture for your scrub. In a small bowl, combine the finely ground oatmeal with honey. If you're using yogurt or milk for added moisture, you can add it to the mixture as well. Stir everything together until you get a thick consistency. Depending on your preference, you can adjust the consistency of the scrub. You can customize your oatmeal scrub by adding other ingredients based on your skin's needs. For example, you can add a few drops of essential oils like lavender or tea tree oil for added fragrance and skin benefits.</p>
+        </div>
+        <h2>HOW TO APPLY:</h2>
+        <div class="apply">
+            <div class="images">
+                <img src="../media/NaturalProducts/scrub/Natural_Products.jpg" alt="">
+            </div>
+            <p>When you're ready to use the oatmeal scrub, dampen your face with lukewarm water. Take a small amount of the scrub and apply it to your damp skin, avoiding the delicate eye area. Gently massage the scrub onto your skin using circular motions for 1-2 minutes. After massaging the scrub onto your skin, rinse it off thoroughly with lukewarm water. Make sure to remove all traces of the scrub from your skin.</p>
+        </div>
+        <div class="benefits">
+            <h3>BENEFITS:</h3>
+            <ul>
+                <li>Finely ground oatmeal acts as a gentle exfoliant, helping to remove dead skin cells, dirt, and impurities from the skin's surface. This promotes cell turnover and reveals smoother, brighter skin underneath.</li>
+                <li>Oatmeal contains anti-inflammatory properties that help to soothe and calm irritated or inflamed skin. It can provide relief for conditions like dryness, itching, and eczema.</li>
+                <li>Oatmeal is a natural humectant, meaning it helps to attract and retain moisture in the skin<li>
+                    <li>The anti-inflammatory properties of oatmeal can help to reduce redness and inflammation associated with conditions like acne, rosacea, and sunburn</li>
+                </ul>
+            </div>
+            <div class="heading">
+                BESAN AND TURMERIC
+            </div>
+            <h2>HOW TO APPLY:</h2>
+            <div class="apply">
+                <div class="images">
+                    <img src="../media/NaturalProducts/facemask/Natural_Products.jpg" alt="">
+                </div>
+                <p>Mix 2 tablespoons of besan (gram flour) with 1 teaspoon of turmeric powder in a bowl. Add enough water or rose water to form a smooth paste. You can customise it according to your preference based on your skin's needs with other ingredients like honey, yogurt. Apply the paste evenly to clean, dry skin, using gentle, circular motions. Leave the pack on for 15-20 minutes to allow it to dry. Once dry, rinse off with lukewarm water and pat your skin dry with a towel. Depending on your preference, you can adjust the consistency of the face mask. You can customise your oatmeal scrub by adding other ingredients .</p>
+            </div>
+            <div class=benefits>
+                <h3>BENEFITS:</h3>
+                <ul>
+                    <li>This face mask is perfect for brightening and exfoliating the skin. Besan helps to absorb excess oil and remove impurities, while turmeric provides anti-inflammatory and antioxidant benefits, leaving your skin glowing and refreshed.</li>
+                    <li>This Face mask remove dead skin cells and reveal a smoother, more vibrant complexion making it ideal for oily or combination skin types. </li>
+                    <li>Meanwhile, turmeric reduce hyperpigmentation, and impart a luminous glow. It boasts anti-inflammatory and antibacterial properties, soothing irritation and combatting acne-causing bacteria. Rich in nutrients, this face pack nourishes the skin from within, leaving it soft, supple, and revitalized.</li>
+                </ul>
+            </div>
+            <div class="heading">
+                YOGURT AND CUCUMBER
+            </div>
+            <h2>HOW TO APPLY:</h2>
+            <div class="apply">
+                <div class="images">
+                    <img src="../media/NaturalProducts/facemask/Natural_Products_P2Qnktk.jpg" alt="">
+                </div>
+                <p>Begin by blending half a cucumber until smooth and mixing it with 2 tablespoons of plain yogurt in a bowl. You can customise it according to your preference based on your skin's needs with other ingredients. Apply the mixture evenly to clean, dry skin, using gentle, upward strokes. Leave the mask on for 10-15 minutes to allow the ingredients to penetrate the skin. Rinse off with cool water and pat your skin dry with a towel. Depending on your preference, you can adjust the consistency of the face mask.</p>
+            </div>
+            <div class="benefits">
+                <h3>BENEFITS:</h3>
+                <ul>
+                    <li>This face mask is perfect for refreshing and revitalizing the skin. Cucumber helps to hydrate and tone the skin, while yogurt gently exfoliates and brightens, leaving your complexion looking radiant and rejuvenated.</li>
+                    <li>With its deeply hydrating properties, this mask envelops your skin in a blanket of moisture, leaving it feeling rejuvenated and supple. </li>
+                    <li>The cooling sensation imparted by the cucumber soothes and refreshes, offering relief to tired or sun-kissed skin. The toning effects of cucumber work to refine pores, promoting a smoother, more even complexion. </li>
+                </ul>
+            </div>
+            
         </div>
         
-        {% endfor %}
-        {% for serum in serum %}
-        <div class="heading">
-            {{serum.serum1 |safe}}
-        </div>
-        <h2>HOW TO APPLY:</h2>
-        <div class="apply">
-            <div class="images">
-                <img src="{{ serum.serum1_image.url }}" alt="">
+        <div class="skin-treatment">
+            <div class="differentiation">
+                CONVENTIONAL PRODUCTS BASED ON YOUR SKIN ANALYSIS
             </div>
-            {{serum.serum1_application |safe}}
-        </div>
-        <div class=benefits>
-            <h3>BENEFITS:</h3>
-            <ul>
-                {{serum.serum1_benefits |safe}}
-            </ul>
-        </div>
-        <div class="heading">
-            {{serum.serum2 |safe}}
-        </div>
-        <h2>HOW TO APPLY:</h2>
-        <div class="apply">
-            <div class="images">
-                <img src="{{ serum.serum2_image.url }}" alt="">
-            </div>
-            {{serum.serum2_application |safe}}
-        </div>
-        <div class="benefits">
-            <h3>BENEFITS:</h3>
-            <ul>
-                {{serum.serum2_benefits |safe}}
-            </ul>
-        </div>
-        {% endfor %}
-        {% for moisturizer in moisturizer%}
-        <div class="heading">
-            {{moisturizer.moisturizer1 |safe}}
-        </div>
-        <h2>HOW TO APPLY:</h2>
-        <div class="apply">
-            <div class="images">
-                <img src="{{ moisturizer.moisturizer1_image.url }}" alt="">
-            </div>
-            {{moisturizer.moisturizer1_application |safe}}
-        </div>
-        <div class=benefits>
-            <h3>BENEFITS:</h3>
-            <ul>
-                {{moisturizer.moisturizer1_benefits |safe}}
-            </ul>
-        </div>
-        <div class="heading">
-            {{moisturizer.moisturizer2 |safe}}
-        </div>
-        <h2>HOW TO APPLY:</h2>
-        <div class="apply">
-            <div class="images">
-                <img src="{{ moisturizer.moisturizer2_image.url }}" alt="">
-            </div>
-            {{moisturizer.moisturizer2_application |safe}}
-        </div>
-        <div class="benefits">
-            <h3>BENEFITS:</h3>
-            <ul>
-                {{moisturizer.moisturizer2_benefits |safe}}
-            </ul>
-        </div>
-        {% endfor %}
-        {% for scrub in scrub %}
-        <div class="heading">
-            {{scrub.scrub1 |safe}}
-        </div>
-        <div class="preparation">
-            <h2>PREPARATION:</h2>
-            {{scrub.scrub1_preperation |safe}}
-        </div>
-        <h2>HOW TO APPLY:</h2>
-        <div class="apply">
-            <div class="images">
-                <img src="{{ scrub.scrub1_image.url }}" alt="">
-            </div>
-            {{scrub.scrub1_application |safe}}
-        </div>
-        <div class=benefits>
-            <h3>BENEFITS:</h3>
-            <ul>
-                {{scrub.scrub1_benefits |safe}}
-            </ul>
-        </div>
-        <div class="heading">
-            {{scrub.scrub2 |safe}}
-        </div>
-        <div class="preparation">
-            <h2>PREPARATION:</h2>
-            {{scrub.scrub2_preperation |safe}}
-        </div>
-        <h2>HOW TO APPLY:</h2>
-        <div class="apply">
-            <div class="images">
-                <img src="{{ scrub.scrub2_image.url }}" alt="">
-            </div>
-            {{scrub.scrub2_application |safe}}
-        </div>
-        <div class="benefits">
-            <h3>BENEFITS:</h3>
-            <ul>
-                {{scrub.scrub2_benefits |safe}}
-            </ul>
-        </div>
-        {% endfor %}
-        {% for facemask in facemask %}
-        <div class="heading">
-            {{facemask.facemask1 |safe}}
-        </div>
-        <h2>HOW TO APPLY:</h2>
-        <div class="apply">
-            <div class="images">
-                <img src="{{ facemask.facemask1_image.url }}" alt="">
-            </div>
-            {{facemask.facemask1_application |safe}}
-        </div>
-        <div class=benefits>
-            <h3>BENEFITS:</h3>
-            <ul>
-                {{facemask.facemask1_benefits |safe}}
-            </ul>
-        </div>
-        <div class="heading">
-            {{facemask.facemask2 |safe}}
-        </div>
-        <h2>HOW TO APPLY:</h2>
-    <div class="apply">
-        <div class="images">
-            <img src="{{ facemask.facemask2_image.url }}" alt="">
-        </div>
-        {{facemask.facemask2_application |safe}}
-    </div>
-    <div class="benefits">
-        <h3>BENEFITS:</h3>
-        <ul>
-            {{facemask.facemask2_benefits |safe}}
-        </ul>
-    </div>
-    {% endfor %}
-
-</div>
-
-<div class="skin-treatment">
-    <h3 class="message" id="message">
-        {{message}}
-    </h3>
-    <div id="morning_routine">
+            <div id="morning_routine">
         <div class="content">
             <div class="facewash">
-                {% for facewash in suggested_facewash %}
                 <h1>MORNING ROUTINE BASED ON YOUR SKIN ANALYSIS</h1>
                 <h3>STEP 1 -FACE WASH/CLEANSER:</h3>
                 <div class="essentials">
@@ -203,92 +271,105 @@
                     
                     <ul class="description">
                         Opt for face washes with
-                        {{facewash.essentials |safe}}
+                        <li>Gentle Cleansing</li>
+                        <li>pH-Balanced</li>
+                        <li>Hydrating Ingredients</li>
+                        <li>Non-Comedogenic</li>
+                        <li>Antioxidants.</li>
                                
                     </ul>
                 </div>
                 
                 <div class="essentials">
                     <div class="head-images">
-                        <img src="{{ facewash.image1.url }}" alt="">
-                        <img src="{{ facewash.image2.url }}" alt="">
+                        <img src="../media/suggestions/facewash/Normal.webp" alt="">
+                        <img src="../media/suggestions/facewash/Normal.jpg" alt="">
                     </div>
                     <div class="description">
-                        {{facewash.description |safe}}
+                        <p>DOT AND KEY  Barrier repair + hydrating  Gentle Face Wash With Probiotic, Ceramide Face Wash for normal skin that Cleanses Skin From Dirt &Oil for Unisex it is Ultra Mild Cleanser Sulphate-free & soap-free.</p>
+                        <p>THE FACE SHOP Rice Water Bright Foaming Face Wash for Glowing Skin, Moringa Oil for Moisturization ,Cleanser for Uneven Skin Tone. This gently, brightening cleansing foam enriched with rice extracts offers your skin a clear and even complexion.</p>
                     </div>
             </div>
-            {% endfor %}
         </div>
         <div class="serum">
-            {% for serum in suggested_serum %}
             <h3>STEP 2 -SERUM:</h3>
             <div class="essentials">
                 <div class="head">Essentials:</div>
                     
                     <ul class="description">
                         Opt for serums with
-                        {{serum.essentials |safe}}
+                        <li>Hyaluronic Acid Serum</li>
+                        <li>Vitamin C Serum</li>
+                        <li>Niacinamide Serum</li>
+                        <li>Anti Oxidant Serum</li>
+                        <li>peptide Serum</li>
+                        <li>Glycolic or Lactic Acid Serum.</li>
                                
                     </ul>
                 </div>
                
                 <div class="essentials">
                     <div class="head-images">
-                        <img src="{{ serum.image1.url }}" alt="">
-                        <img src="{{ serum.image2.url }}" alt="">
+                        <img src="../media/suggestions/serum/Normal.webp" alt="">
+                        <img src="../media/suggestions/serum/Normal.jpg" alt="">
                     </div>
                     <div class="description">
-                        {{serum.description |safe}}
+                        <p>FOXTALE hydrating serum with hyaluronic acid provides 24-hr moisturization and prevents the formation of lines and wrinkles and makes the skin plumpy.</p>
+                        <p>PLUM 15% Vitamin C Face Serum For Glowing Skin  Reduces Dark Spots For Dull Skin  With Mandarin,No artificial colours, fragrances or essential oils added! 100% vegan, paraben-free, phthalate-free as always.</p>
                     </div>
             </div>
-            {% endfor %}
         </div>
         <div class="moisturizer">
-            {% for moisturizer in suggested_moisturizer %}
             <h3>STEP 3 -MOISTURIZER:</h3>
             <div class="essentials">
                 <div class="head">Essentials:</div>
                     
                     <ul class="description">
                         Opt for moisturizers with
-                        {{moisturizer.essentials |safe}}
+                        <li>Hydration</li>
+                        <li>Lightweight Texture</li>
+                        <li>Balanced Formulation</li>
+                        <li>non comedogenic</li>
+                        <li>fragrance free.</li>
                                
                     </ul>
                 </div>
                 
                 <div class="essentials">
                     <div class="head-images">
-                        <img src="{{ moisturizer.image1.url }}" alt="">
-                        <img src="{{ moisturizer.image2.url }}" alt="">
+                        <img src="../media/suggestions/moisturizer/Normal.jpg" alt="">
+                        <img src="../media/suggestions/moisturizer/Normal.webp" alt="">
                     </div>
                     <div class="description">
-                        {{moisturizer.description |safe}}
+                        <p>DOT AND KEY'S Daily vitamin C+E moisturizer for even-toned, visibly glowing skin Infused with Triple Vitamin C, Sicilian Blood Orange, Vitamin E & Shea Butter. Helps reduce dullness, treats pigmentation & fades dark spots.</p>
+                        <p>FOXTALE Super Glow Moisturizer With Nano Vitamin C, Niacinamide, Encapsulated Peptides - Visibly Bright Skin from 1st Use, Goes 2X Deeper. Reduces pigmentation and evens skin tone. sulphate free, dermatologically tested. </p>
                     </div>
             </div>
-            {% endfor %}
         </div>
         <div class="sunscreen">
-            {% for sunscreen in suggested_sunscreen %}
             <h3>STEP 4 -SUNSCREEN:</h3>
             <div class="essentials">
                 <div class="head">Essentials:</div>
                     
                     <ul class="description">
                         Opt for sunscreens with
-                        {{sunscreen.essentials |safe}}
+                        <li>SPF Level</li>
+                        <li>Broad-Spectrum Protection</li>
+                        <li>Non comedogenic</li>
+                        <li>Antioxidants</li>
                                
                     </ul>
                 </div>
                 <div class="essentials">
                     <div class="head-images">
-                        <img src="{{ sunscreen.image1.url }}" alt="">
-                        <img src="{{ sunscreen.image2.url }}" alt="">
+                        <img src="../media/suggestions/sunscreen/Normal.webp" alt="">
+                        <img src="../media/suggestions/sunscreen/Normal_NCFGsbC.webp" alt="">
                     </div>
                     <div class="description">
-                        {{sunscreen.description |safe}}
+                        <p>Dr. SHETH'S Ceramide & Vitamin C Sunscreen SPF 50+ PA+++  One Step Routine for Summer  Non-Greasy, Quick-Absorbing and  Zero White Cast. protects from UV rays & blue light. Prevents premature aging & sunburn and strengthens the skin barrier.</p>
+                        <p>Aqualogica Glow+ Dewy Sunscreen SPF 50 PA++++,Prevents Tanning and Gives Skin Glow,Gets quickly absorbed with no white cast.</p>
                     </div>
             </div>
-            {% endfor %}
         </div>
         
     </div>
@@ -382,27 +463,11 @@
 <!-- footer -->
 <div class="footer-container" style="background:url('../static/footer/images/products1.jpg');background-repeat: no-repeat;background-size: cover;background-position-y: center;">
     <div class="icons">
-        <a href="https://mail.google.com/mail/"><img class="image" src="{% static 'footer/images/email.png' %}" alt="" width="40px" height="30px"></a>
-        <a href="https://www.instagram.com/"><img class="image" src="{% static 'footer/images/instagram.png' %}" alt="" width="40px" height="30px"></a>
-        <a href="https://twitter.com/?lang=en"><img class="image" src="{% static 'footer/images/twitter.png' %}" alt="" width="40px" height="30px"></a>
+        <a href="https://mail.google.com/mail/"><img class="image" src="../static/footer/images/email.png" alt="" width="40px" height="30px"></a>
+        <a href="https://www.instagram.com/"><img class="image" src="../static/footer/images/instagram.png" alt="" width="40px" height="30px"></a>
+        <a href="https://twitter.com/?lang=en"><img class="image" src="../static/footer/images/twitter.png" alt="" width="40px" height="30px"></a>
     </div>
     <div class="content">FOR MORE INFORMATION CONNECT US AT: <a href="https://mail.google.com/mail/">skinsaviour@gmail.com</a></div>
 </div>
-
-<script>
-    document.addEventListener("DOMContentLoaded",()=>{
-        var message=document.getElementById("message");
-        var night_routine=document.getElementById("night-routine");
-        var disclaimer=document.getElementById("disclaimer");
-
-        if(message.innerText){
-            night_routine.style.display="none"
-            disclaimer.style.display="none"
-        }
-        else{
-            night_routine.style.display="block"
-            disclaimer.style.display="block"
-        }
-    })
-
-</script>
+</body>
+</html>

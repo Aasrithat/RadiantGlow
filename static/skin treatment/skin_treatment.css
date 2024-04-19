@@ -1,18 +1,28 @@
 /* natural products */
+
 .naturalproducts{
     margin-right: 5rem;
     margin-left: 5rem;
     
 }
+.differentiation{
+    background-color: #b56231;
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    border-radius: 20px;
 
+}
+.skin-treatment .differentiation{
+    margin-right: 5.5rem;
+    margin-left: 5.5rem;
+}
 .naturalproducts .disclaimer{
     display: flex;
     justify-content: center;
     text-align: center;
     align-items: center;
-    color: #b56231;
     font-size: 20px;
-    /* font-weight:550; */
     line-height: 2rem;
     margin: 1rem;
 }

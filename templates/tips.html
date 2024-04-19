@@ -1,9 +1,64 @@
-{% include 'header.html' %}{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/header/header.css">
+    <link rel="stylesheet" href="../static/tips/tips.css">
+    <script src="../static/header/header.js" defer></script>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+   
+    <title>SKIN SAVIOUR</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      intergrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+</head>
+<body>
+    <div id="overlay"><div class="popup" id="popup"></div></div>
+        <nav class="navigation">
+            <img class="image" src="../static/header/images/banner1.jpg" alt="">
+            <div class="container">
+            <div class="nav" id="navbar">
+            <div class="section-logo" >
+                <img src="../static/header/images/logo.png" alt="logo" width="40px" height="40px">
+                <h3 class="name">SKIN-SAVIOUR</h3>
+            </div>
+            <ul class="tabs">
+                <a href="home.html"><li >Home</li></a>
+                <a href="about.html"><li >About Us</li></a>
+                <a href="quiz.html"><li>Take Your Quiz</li></a>
+                <a href="skin_treatment.html"><li>Skin Treatement</li></a>
+                <a href="#"><li >Tips</li></a>
+                <a href="contact_us.html"><li>Contact Us</li></a>
+                
+                <button type="button" class="profile" id="profile" ><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                </svg>
+                <div id="dropdown">
+                    <div class="dropdown-items">
+                        <a href="signup.html">Signup</a>
+                        <a href="home.html">Logout</a>
+                    </div>
+                </div>
+                </button>
+                
+            </ul>
+            </div>
+            <div class="caption">
+            <h1 class="content" id="content">A ONE STOP DESTINATION FOR YOUR SKIN TIPS</h1>
+            </div>
+            </div>
+        </nav>
 
 <div class="tips">
 <div class="section1">
     <div class="image">
-        <img src="{% static 'tips/images/img.jpg' %}" alt=""/>
+        <img src="../static/tips/images/img.jpg" alt=""/>
     </div>
     <div class="description">
         <h2>WHAT WE COVER ?</h2>
@@ -12,33 +67,33 @@
 </div>
 <div class="section2">
     <div class="card">
-        <img src="{% static 'tips/images/img1.jpg' %}" alt=""/>
+        <img src="../static/tips/images/img1.jpg" alt=""/>
         <h3>WHY SKINCARE ?</h3>
     </div>
     <div class="card">
-        <img src="{% static 'tips/images/img2.png' %}" alt=""/>
+        <img src="../static/tips/images/img2.png" alt=""/>
         <h3>BENEFITS OF SKINCARE</h3>
     </div>
     <div class="card">
-        <img src="{% static 'tips/images/img3.png' %}" alt=""/>
+        <img src="../static/tips/images/img3.png" alt=""/>
         <h3>COMBINATIONS</h3>
     </div>
     <div class="card">
-        <img src="{% static 'tips/images/img4.png' %}" alt=""/>
+        <img src="../static/tips/images/img4.png" alt=""/>
         <h3>THINGS U SHOULD INCLUDE IN YOUR DAILY ROUTINE</h3>
     </div>
     <div class="card">
-        <img src="{% static 'tips/images/img5.jpg' %}" alt=""/>
+        <img src="../static/tips/images/img5.jpg" alt=""/>
         <h3>SUGGESTIONS BASED ON YOUR SKIN CONCERN</h3>
     </div>
     <div class="card">
-        <img src="{% static 'tips/images/img6.webp' %}" alt=""/>
+        <img src="../static/tips/images/img6.webp" alt=""/>
         <h3>SUGGESTIONS BASED ON YOUR SKIN TYPE</h3>
     </div>
 </div>
 <div class="section3">
     <div class="image">
-        <img src="{% static 'tips/images/img31.jpg' %}" alt=""/>
+        <img src="../static/tips/images/img31.jpg" alt=""/>
     </div>
     <div class="description">
         <h2>WHY SKINCARE ?</h2>
@@ -51,15 +106,15 @@
         <p class="content">Having a good skincare routine helps us in many ways. It keeps our skin healthy and protected from things like the sun and pollution. This means we're less likely to get wrinkles and our skin stays hydrated and youthful-looking. Plus, taking care of our skin can be a nice way to relax and feel good about ourselves. When we use creams and treatments, it's like giving ourselves a little pampering session. And when our skin looks good, we feel more confident in everything we do. " Skincare isn't just about looking nice—it's about feeling good and taking care of ourselves inside and out. "</p>
     </div>
     <div class="image">
-        <img src="{% static 'tips/images/img32.png' %}" alt=""/>
+        <img src="../static/tips/images/img32.png" alt=""/>
     </div>
 </div>
 <h1>COMBINATIONS</h1>
 <p class="description1">Discover the perfect combination of skincare products and routines to address your unique skin concerns. we'll help you create a customised regimen that works harmoniously to promote clear, glowing skin.</p>
 <div class="section5">
     <div class="image">
-        <div class="one"><img src="{% static 'tips/images/img411.jpg' %}" alt=""/></div>
-        <div class="two"><img src="{% static 'tips/images/img412.jpg' %}" alt=""/></div>
+        <div class="one"><img src="../static/tips/images/img411.jpg" alt=""/></div>
+        <div class="two"><img src="../static/tips/images/img412.jpg" alt=""/></div>
     </div>
     <div class="description">
         <h2>GLYCOLIC + SALICYLIC ACID</h2>
@@ -72,14 +127,14 @@
         <p class="content">Niacinamide helps to reduce the appearance of dark spots, hyperpigmentation, and uneven skin tone, while vitamin C (ascorbic acid) is a potent antioxidant that brightens the complexion and fades pigmentation. Niacinamide has anti-inflammatory properties that help calm redness, irritation, and acne. Vitamin C also exhibits soothing effects and can reduce inflammation, making this combination beneficial for those with sensitive or acne-prone skin. Niacinamide strengthens the skin's barrier function. Vitamin C boosts this effect by promoting collagen production and supporting skin repair processes.</p>
     </div>
     <div class="image">
-        <div class="three"><img src="{% static 'tips/images/img421.jpg' %}" alt=""/></div>
-        <div class="four"><img src="{% static 'tips/images/img422.jpg' %}" alt=""/></div>
+        <div class="three"><img src="../static/tips/images/img421.jpg" alt=""/></div>
+        <div class="four"><img src="../static/tips/images/img422.jpg" alt=""/></div>
     </div>
 </div>
 <div class="section7">
     <div class="image">
-        <div class="one"><img src="{% static 'tips/images/img431.jpg' %}" alt=""/></div>
-        <div class="two"><img src="{% static 'tips/images/img432.jpg' %}" alt=""/></div>
+        <div class="one"><img src="../static/tips/images/img431.jpg" alt=""/></div>
+        <div class="two"><img src="../static/tips/images/img432.jpg" alt=""/></div>
     </div>
     <div class="description">
         <h2>RETINOL + HYALURONIC ACID</h2>
@@ -92,8 +147,8 @@
         <p class="content">Both kojic acid and niacinamide have skin-brightening properties that help reduce the appearance of dark spots, hyperpigmentation, and uneven skin tone. By inhibiting melanin production, kojic acid lightens existing pigmentation, while niacinamide helps to prevent future discoloration and promote a more radiant complexion. Niacinamide is a potent antioxidant that helps neutralize free radicals and protect the skin from environmental damage. When combined with kojic acid, which also possesses antioxidant properties, it enhances the skin's defence against oxidative stress, preventing premature aging and promoting overall skin health.</p>
     </div>
     <div class="image">
-        <div class="three"><img src="{% static 'tips/images/img441.jpg' %}" alt=""/></div>
-        <div class="four"><img src="{% static 'tips/images/img442.jpg' %}" alt=""/></div>
+        <div class="three"><img src="../static/tips/images/img441.jpg" alt=""/></div>
+        <div class="four"><img src="../static/tips/images/img442.jpg" alt=""/></div>
     </div>
 </div>
 <div class="section9">
@@ -126,7 +181,7 @@
 <h1>SUGGESTIONS BASED ON YOUR SKIN CONCERN</h1>
 <div class="section10">
     <div class="image">
-        <img src="{% static 'tips/images/img51.png' %}" alt=""/>
+        <img src="../static/tips/images/img51.png" alt=""/>
     </div>
     <div class="description">
         <h2>DEHYDRATION/BREAKOUTS/DRY PATCHES/SENSITIVITY/IRRITATION</h2>
@@ -139,12 +194,12 @@
         <p class="content">Salicylic acid is a beta hydroxy acid (BHA) that penetrates deep into the pores, effectively dissolving excess oil and debris that can lead to acne. It also has anti-inflammatory properties, making it useful for reducing redness and swelling associated with active breakouts. Salicylic acid exfoliates the skin, helping to unclog pores and prevent breakouts. Salicylic acid is commonly found in cleansers, toners, spot treatments, and exfoliating pads. For beginners, start with a low concentration (usually around 0.5% to 2%) and gradually increase as tolerated. You can use it once or twice daily, depending on your skin's tolerance.</p>
     </div>
     <div class="image">
-        <img src="{% static 'tips/images/img52.webp' %}" alt=""/>
+        <img src="../static/tips/images/img52.webp" alt=""/>
     </div>
 </div>
 <div class="section12">
     <div class="image">
-        <img src="{% static 'tips/images/img53.webp' %}" alt=""/>
+        <img src="../static/tips/images/img53.webp" alt=""/>
     </div>
     <div class="description">
         <h2>HYPER PIRGMENTATION</h2>
@@ -157,12 +212,12 @@
         <p class="content">Retinol stimulates collagen production in the skin, which helps to improve skin firmness and elasticity. By increasing cell turnover, retinol helps to smooth the skin's surface, reducing the appearance of fine lines and wrinkles. Retinol also promotes the production of new skin cells, which can help to fade existing wrinkles and prevent the formation of new ones.Retinol helps to regulate sebum production, which can contribute to the appearance of enlarged pores. By reducing excess oil production, retinol can help to minimize the size of pores.</p>
     </div>
     <div class="image">
-        <img src="{% static 'tips/images/img54.jpg' %}" alt=""/>
+        <img src="../static/tips/images/img54.jpg" alt=""/>
     </div>
 </div>
 <div class="section14">
     <div class="image">
-        <img src="{% static 'tips/images/img55.webp' %}" alt=""/>
+        <img src="../static/tips/images/img55.webp" alt=""/>
     </div>
     <div class="description">
         <h2>ACNE MARKS</h2>
@@ -172,7 +227,7 @@
 <h1>SUGGESTIONS BASED ON YOUR SKIN TYPE</h1>
 <div class="section15">
     <div class="image">
-        <img src="{% static 'tips/images/img61.jpg' %}" alt=""/>
+        <img src="../static/tips/images/img61.jpg" alt=""/>
     </div>
     <div class="description">
         <h2>FOR DRY SKIN</h2>
@@ -185,12 +240,12 @@
         <p class="content">Salicylic acid is highly beneficial for oily skin due to its unique properties that target excess oil production and related concerns. As a beta hydroxy acid (BHA), salicylic acid is oil-soluble, allowing it to penetrate deep into the pores where it effectively dissolves sebum, dirt, and other impurities that can lead to clogged pores and breakouts. By unclogging pores, salicylic acid helps to prevent acne blemishes, blackheads, and whiteheads, making it an essential ingredient in acne-fighting skincare products. Additionally, salicylic acid has anti-inflammatory properties that help reduce redness and inflammation associated with acne, promoting a clearer, calmer complexion. </p>
     </div>
     <div class="image">
-        <img src="{% static 'tips/images/img62.png' %}" alt=""/>
+        <img src="../static/tips/images/img62.png" alt=""/>
     </div>
 </div>
 <div class="section17">
     <div class="image">
-        <img src="{% static 'tips/images/img63.png' %}" alt=""/>
+        <img src="../static/tips/images/img63.png" alt=""/>
     </div>
     <div class="description">
         <h2>FOR SENSITIVE SKIN</h2>
@@ -203,7 +258,7 @@
         <p class="content">For combination skin-type, Salicylic acid is a beta hydroxy acid (BHA) known for its ability to penetrate deep into the pores, making it effective for addressing both oily and acne-prone areas, common concerns in combination skin. Salicylic acid helps to unclog pores, remove excess oil, and prevent breakouts, making it especially useful for the T-zone or areas prone to acne and congestion. Another benefit of salicylic acid for combination skin is its exfoliating properties. By gently sloughing away dead skin cells, salicylic acid promotes smoother, more even skin texture, addressing dry patches often found in combination skin while also helping to refine the appearance of enlarged pores. </p>
     </div>
     <div class="image">
-        <img src="{% static 'tips/images/img64.png' %}" alt=""/>
+        <img src="../static/tips/images/img64.png" alt=""/>
     </div>
 </div>
 </div>
@@ -213,9 +268,9 @@
 <!-- footer -->
 <div class="footer-container" style="background:url('../static/footer/images/products1.jpg');background-repeat: no-repeat;background-size: cover;background-position-y: center;">
     <div class="icons">
-        <a href="https://mail.google.com/mail/"><img class="image" src="{% static 'footer/images/email.png' %}" alt="" width="40px" height="30px"></a>
-        <a href="https://www.instagram.com/"><img class="image" src="{% static 'footer/images/instagram.png' %}" alt="" width="40px" height="30px"></a>
-        <a href="https://twitter.com/?lang=en"><img class="image" src="{% static 'footer/images/twitter.png' %}" alt="" width="40px" height="30px"></a>
+        <a href="https://mail.google.com/mail/"><img class="image" src="../static/footer/images/email.png" alt="" width="40px" height="30px"></a>
+        <a href="https://www.instagram.com/"><img class="image" src="../static/footer/images/instagram.png" alt="" width="40px" height="30px"></a>
+        <a href="https://twitter.com/?lang=en"><img class="image" src="../static/footer/images/twitter.png" alt="" width="40px" height="30px"></a>
     </div>
     <div class="content">FOR MORE INFORMATION CONNECT US AT: <a href="https://mail.google.com/mail/">skinsaviour@gmail.com</a></div>
 </div>
